@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const Top = () => {
 
     return (
-    <div className="max-w-[1224px] w-full mx-auto mt-7 flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-20 pb-16 sm:pb-20 border-b border-b-[#484848] px-4">
-        <div className="max-w-[343px] sm:max-w-[544px] w-full flex flex-col items-start justify-center">
+    <section className="max-w-[1224px] w-full mx-auto mt-7 flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-20 pb-16 sm:pb-20 border-b border-b-[#484848] px-4">
+        <div className="sm:max-w-[544px] w-full flex flex-col items-start justify-center">
             <h2 className="font-bebas text-white max-lg:text-5xl text-8xl mb-2">
               Hola, soy <br /> Martin Nuñez.
             </h2>
@@ -12,7 +13,7 @@ const Top = () => {
               Un ingeniero de sistemas apasionado por el desarrollo web, enfocado en crear experiencias accesibles y amigables para el usuario.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="flex items-center justify-center bg-[#D3E97A] text-[#0A0A0A] font-manrope font-bold text-[14px] sm:text-base w-[163px] sm:w-[187px] h-[48px] sm:h-[54px] px-4 gap-1 py-[19px] rounded-4xl">
+              <Link href="#contact" className="flex items-center justify-center bg-[#D3E97A] text-[#0A0A0A] font-manrope font-bold text-[14px] sm:text-base w-[163px] sm:w-[187px] h-[48px] sm:h-[54px] px-4 gap-1 py-[19px] rounded-4xl">
                 CONTÁCTAME
                 <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx={20} cy={20} r={20} fill="#0A0A0A" />
@@ -33,8 +34,10 @@ const Top = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[343px] h-[400px] sm:w-[600px] sm:h-[700px] bg-[#C7C7C7] rounded-2xl"></div>
-        </div>
+          <div className="w-[343px] h-[400px] sm:w-[600px] sm:h-full bg-[#C7C7C7] rounded-2xl flex items-end justify-center">
+            <Image src="/img-martin.png" alt="Martin Nuñez Navarro" width={550} height={400} className="w-full" />
+          </div>
+        </section>
     )
 }
 

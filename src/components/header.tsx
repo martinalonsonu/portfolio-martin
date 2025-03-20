@@ -2,15 +2,15 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="w-full px-14 py-6 flex justify-between items-center sticky top-0 bg-black/60 backdrop-blur-md">
+        <header className="max-w-[1224px] w-full max-sm:px-4 max-sm:py-4 px-4 py-6 flex justify-between items-center sticky top-0 bg-black/60 backdrop-blur-md m-auto">
             <Link href='/'>
                 <h1 className="text-white text-[32px]/[150%] font-bebas font-normal">Martin Nuñez</h1>
             </Link>
             <nav>
             <ul className="max-sm:hidden gap-5 flex text-white text-base/[24px] font-inter font-normal">
-                <li className="flex items-center"><Link href="#">Proyectos</Link></li>                
-                <li className="flex items-center"><Link href="#">Acerca de mi</Link></li>                
-                <li className="flex items-center"><Link href="#">Contacto</Link></li>                
+                <li className="flex items-center"><Link href="/#projects">Proyectos</Link></li>                
+                <li className="flex items-center"><Link href="#aboutMe">Acerca de mi</Link></li>                
+                <li className="flex items-center"><Link href="#contact">Contacto</Link></li>                
             </ul>
             </nav>
             <svg

@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${bebasNeue.variable} ${inter.variable} ${manrope.variable} `}
+      cz-shortcut-listen="true"
       >
         {children}
       </body>
