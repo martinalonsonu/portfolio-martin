@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter, Manrope } from "next/font/google";
+import Header from "@/components/header";
 import "./globals.css";
 
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${bebasNeue.variable} ${inter.variable} ${manrope.variable} `}
       cz-shortcut-listen="true"
       >
+        <Header />
         {children}
       </body>
     </html>
