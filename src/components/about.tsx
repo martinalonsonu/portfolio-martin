@@ -78,6 +78,8 @@ const AboutSection = ({ isHome }: { isHome: boolean }) => {
           width={300}
           height={400}
           className="w-full max-sm:h-[400px] h-[500px] object-contain"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </section>
