@@ -21,13 +21,13 @@ const Header = () => {
         <nav>
           <ul className="max-sm:hidden gap-5 flex text-white text-base/[24px] font-inter font-normal">
             <li className="flex items-center">
-              <Link href="/#projects">Proyectos</Link>
+              <Link href="/#projects" onClick={() => handleMenuToggle()}>Proyectos</Link>
             </li>
             <li className="flex items-center">
-              <Link href="#aboutMe">Acerca de mi</Link>
+              <Link href="#aboutMe" onClick={() => handleMenuToggle()}>Acerca de mi</Link>
             </li>
             <li className="flex items-center">
-              <Link href="#contact">Contacto</Link>
+              <Link href="#contact" onClick={() => handleMenuToggle()}>Contacto</Link>
             </li>
           </ul>
         </nav>
