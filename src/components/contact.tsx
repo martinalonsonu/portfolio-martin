@@ -2,12 +2,37 @@ import Link from "next/link";
 
 const Contact = () => {
   return (
-    <section className="flex justify-between items-center max-sm:flex-col flex-row max-w-[1224px] m-auto px-4 max-lg:py-16 py-20" id="contact">
+    <section
+      className="flex justify-between items-center max-sm:flex-col flex-row max-w-[1224px] m-auto px-4 max-lg:py-16 py-20"
+      id="contact"
+    >
       <div className="min-sm:max-w-[600px] min-sm:min-h-[495px] w-full h-auto flex flex-col justify-between items-start py-6">
         <div>
-          <h3 className="max-lg:text-[43px]/[100%] text-[76px]/[100%] font-bebas text-white">CONECTA CONMIGO</h3>
-          <p className="max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7] mt-4 mb-2">Puedes escribirme a <span className="underline underline-offset-2 decoration-[#D3E97A]"><Link href="mailto:martin99huacho@gmail.com">martin99huacho@gmail.com</Link></span>.</p>
-          <p  className="max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7]">Para más información, aquí está mi <span className="underline underline-offset-2 decoration-[#D3E97A]"><Link href="/cv-martin-nunez.pdf" target="_blank" download="cv-martin-nunez">currículum vitae</Link></span>.</p>
+          <h3 className="max-lg:text-[43px]/[100%] text-[76px]/[100%] font-bebas text-white">
+            CONECTA CONMIGO
+          </h3>
+          <p className="max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7] mt-4 mb-2">
+            Puedes escribirme a{" "}
+            <span className="underline underline-offset-2 decoration-[#D3E97A]">
+              <Link href="mailto:martin99huacho@gmail.com">
+                martin99huacho@gmail.com
+              </Link>
+            </span>
+            .
+          </p>
+          <p className="max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7]">
+            Para más información, aquí está mi{" "}
+            <span className="underline underline-offset-2 decoration-[#D3E97A]">
+              <Link
+                href="/cv-martin-nunez.pdf"
+                target="_blank"
+                download="cv-martin-nunez"
+              >
+                currículum vitae
+              </Link>
+            </span>
+            .
+          </p>
           <div className="flex gap-6 mt-10">
             <Link
               href="https://www.linkedin.com/in/martinalonsonu/"
@@ -79,10 +104,12 @@ const Contact = () => {
             </Link>
           </div>
         </div>
-        <p className="max-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7]">© 2025 / Hecho con ❤️ por @martinalonsonu</p>
+        <p className="max-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7]">
+          © 2025 / Hecho con ❤️ por @martinalonsonu
+        </p>
       </div>
       <div className="w-full">
-        <form className="w-full bg-black text-white">
+        <form className="w-full text-white">
           <div className="mb-4">
             <label className="block mb-1 text-sm" htmlFor="name">
               Nombre
@@ -133,7 +160,9 @@ const Contact = () => {
             ENVIAR
           </button>
         </form>
-        <p className="min-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7] mt-8 text-center">© 2025 / Hecho con ❤️ por @martinalonsonu</p>
+        <p className="min-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7] mt-8 text-center">
+          © 2025 / Hecho con ❤️ por @martinalonsonu
+        </p>
       </div>
     </section>
   );

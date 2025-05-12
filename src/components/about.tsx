@@ -56,7 +56,7 @@ const AboutSection = ({ isHome }: { isHome: boolean }) => {
             Siempre en busca de nuevos desafíos, listo para aportar valor a tu
             equipo. ¡Hablemos! 🚀
           </p>
-          {!isHome && <Socials textButton="DESCARGA CV" />}
+          {!isHome && <Socials textButton="CURRICULUM" />}
         </ContainerDiv>
         {isHome && (
           <Link
