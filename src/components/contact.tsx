@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 const Contact = () => {
+  const year = new Date().getFullYear();
+  const message = `© ${year} / Hecho con ❤️ por @martinalonsonu`;
   return (
     <section
       className="flex justify-between items-center max-sm:flex-col flex-row max-w-[1224px] m-auto px-4 max-lg:py-16 py-20"
@@ -24,9 +26,9 @@ const Contact = () => {
             Para más información, aquí está mi{" "}
             <span className="underline underline-offset-2 decoration-[#D3E97A]">
               <Link
-                href="/cv-martin-nunez.pdf"
+                href="/martin.nuñez-cv.pdf"
                 target="_blank"
-                download="cv-martin-nunez"
+                download="martin.nuñez-cv.pdf"
               >
                 currículum vitae
               </Link>
@@ -105,7 +107,7 @@ const Contact = () => {
           </div>
         </div>
         <p className="max-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7]">
-          © 2025 / Hecho con ❤️ por @martinalonsonu
+          {message}
         </p>
       </div>
       <div className="w-full">
@@ -161,7 +163,7 @@ const Contact = () => {
           </button>
         </form>
         <p className="min-sm:hidden text-base/[160%] font-manrope text-[#C7C7C7] mt-8 text-center">
-          © 2025 / Hecho con ❤️ por @martinalonsonu
+          {message}
         </p>
       </div>
     </section>

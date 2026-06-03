@@ -7,12 +7,13 @@ interface SocialsProps {
 
 const Socials: FC<SocialsProps> = (props) => {
   const { textButton } = props;
-  const isDownloadCV = textButton === "DESCARGA CV";
+  const isDownloadCV = textButton === "CURRICULUM";
   return (
     <div className="flex gap-4">
       <Link
-        href={isDownloadCV ? "/cv-martin-nunez.pdf" : "#contact"}
+        href={isDownloadCV ? "/martin.nuñez-cv.pdf" : "#contact"}
         target={isDownloadCV ? "_blank" : ""}
+        download="martin.nuñez-cv.pdf"
         className="flex items-center justify-center bg-[#D3E97A] text-[#0A0A0A] font-manrope font-bold text-[14px] sm:text-base w-[163px] sm:w-[187px] h-[48px] sm:h-[54px] px-4 gap-1 py-[19px] rounded-4xl"
       >
         {textButton}
