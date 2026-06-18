@@ -131,11 +131,11 @@ const Header = () => {
       {menuOpen && (
         <div
           className={clsx(
-            "fixed inset-0 top-16 bg-black/50 backdrop-blur-sm z-40",
+            "fixed inset-0 top-16 bg-card backdrop-blur-sm z-40",
             "md:hidden",
           )}
         >
-          <nav className={clsx("bg-black/95 w-full h-screen flex flex-col")}>
+          <nav className={clsx("bg-card w-full h-screen flex flex-col")}>
             <ul className={clsx("flex flex-col gap-6 p-6 text-lg")}>
               <li>
                 <a href="#about" onClick={() => setMenuOpen(false)}>
