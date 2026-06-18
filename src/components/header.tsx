@@ -38,14 +38,15 @@ const Header = () => {
                 <Link href="/#experience">Experiencia</Link>
               </li>
               <li>
+                <Link href="/#services">Servicios</Link>
+              </li>
+              <li>
                 <Link href="/#projects">Proyectos</Link>
               </li>
               <li>
                 <Link href="/#about">Acerca de mí</Link>
               </li>
-              <li>
-                <Link href="/#services">Servicios</Link>
-              </li>
+
               <li
                 className={clsx(
                   "border-[#4FC3F7] border-[1px] rounded-md px-3 py-1",
@@ -138,13 +139,13 @@ const Header = () => {
           <nav className={clsx("bg-card w-full h-screen flex flex-col")}>
             <ul className={clsx("flex flex-col gap-6 p-6 text-lg")}>
               <li>
-                <a href="#about" onClick={() => setMenuOpen(false)}>
-                  Acerca de mi
+                <a href="#experience" onClick={() => setMenuOpen(false)}>
+                  Experiencia
                 </a>
               </li>
               <li>
-                <a href="#experience" onClick={() => setMenuOpen(false)}>
-                  Experiencia
+                <a href="#services" onClick={() => setMenuOpen(false)}>
+                  Servicios
                 </a>
               </li>
               <li>
@@ -153,8 +154,8 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#services" onClick={() => setMenuOpen(false)}>
-                  Servicios
+                <a href="#about" onClick={() => setMenuOpen(false)}>
+                  Acerca de mi
                 </a>
               </li>
               <li
