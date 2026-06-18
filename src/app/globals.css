@@ -1,27 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000;
-  --foreground: #171717;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --font-bebas: var(--font-bebas-neue);
+  --font-inter: var(--font-inter);
+  --font-manrope: var(--font-manrope);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-bebas: var(--font-bebas-neue);  
-  --font-inter: var(--font-inter);  
-  --font-manrope: var(--font-manrope);  
+/* Dark theme when `data-theme="dark"` is applied on <html> */
+html[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-foreground: #ffffff;
 }
 
+html[data-theme="light"] {
+  --color-background: #ffeee8;
+  --color-foreground: #1a1a1a;
+}
+
+/* Fallback to user's system preference */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #1a1a1a;
+    --color-foreground: #f3fbf0;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-poppins), sans-serif;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas-neue);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+/* Gradient subtitle for light mode */
+html[data-theme="light"] .gradient-subtitle {
+  background: linear-gradient(90deg, #4fc3f7 0%, #484e53 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient subtitle for dark mode */
+html[data-theme="dark"] .gradient-subtitle {
+  background: linear-gradient(90deg, #06b6d4 0%, #e0f2fe 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient subtitle for light mode */
+html[data-theme="light"] .bg-card {
+  background: #f9fef5;
+}
+
+/* Gradient subtitle for dark mode */
+html[data-theme="dark"] .bg-card {
+  background: #000;
 }
