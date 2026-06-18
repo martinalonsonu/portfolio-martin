@@ -1,87 +1,53 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import Socials from "./socials";
+import clsx from "clsx";
 
-const AboutSection = ({ isHome }: { isHome: boolean }) => {
-  const styles = {
-    isHome: {
-      container:
-        "flex justify-between items-center max-sm:flex-col flex-row max-w-[1224px] m-auto px-4 max-lg:py-16 py-20 border-b border-b-[#484848]",
-      first: "sm:max-w-[544px] w-full flex flex-col items-start justify-center",
-      paragraph:
-        "max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7] max-w-[600px]",
-      containerImage:
-        "w-full h-[400px] sm:w-[500px] sm:h-full max-sm:mt-16 bg-[#C7C7C7] rounded-2xl flex items-end justify-center",
-    },
-    noHome: {
-      container:
-        "flex justify-between items-center flex-col max-w-[1224px] m-auto px-4 max-lg:py-16 py-20",
-      first: "w-full flex max-sm:flex-col flex-row items-start justify-between",
-      paragraph:
-        "max-lg:text-base/[160%] text-[18px]/[150%] font-manrope text-[#C7C7C7] max-w-[600px] mb-12",
-      containerImage:
-        "w-full h-[400px] sm:h-full max-sm:mt-16 bg-[#C7C7C7] rounded-2xl flex items-end justify-center max-sm:mt-20 mt-30",
-    },
-  };
-
-  const ContainerDiv = isHome ? React.Fragment : "div";
-
+const AboutSection = () => {
   return (
     <section
-      id="aboutMe"
-      className={isHome ? styles.isHome.container : styles.noHome.container}
+      id="about"
+      className={clsx(
+        "flex flex-col items-center text-center max-w-[960px] mx-auto px-4 py-8",
+        "md:py-16",
+      )}
     >
-      <div className={isHome ? styles.isHome.first : styles.noHome.first}>
-        <h3 className="max-lg:text-[43px]/[100%] text-[76px]/[100%] font-bebas text-white">
-          ACERCA DE MI
-        </h3>
-        <ContainerDiv>
-          <p className="max-lg:text-base/[160%] text-[32px]/[150%] font-manrope text-white mb-4">
-            Bachiller en Ing. de Sistemas
-          </p>
-          <p
-            className={
-              isHome ? styles.isHome.paragraph : styles.noHome.paragraph
-            }
-          >
-            <b>
-              Bachiller en Ingeniería de Sistemas con especialización en
-              desarrollo frontend web.
-            </b>{" "}
-            Proactivo y orientado a resultados, con habilidades técnicas y
-            blandas que favorecen el trabajo en equipo. Me especializo en el
-            desarrollo de aplicaciones y sitios web empresariales, contribuyendo
-            a la optimización de procesos y al cumplimiento de objetivos.
-            Siempre en busca de nuevos desafíos, listo para aportar valor a tu
-            equipo. ¡Hablemos! 🚀
-          </p>
-          {!isHome && <Socials textButton="CURRICULUM" />}
-        </ContainerDiv>
-        {isHome && (
-          <Link
-            href="/about"
-            className="flex text-[#D3E97A] text-[14px]/[150%] font-bold font-manrope max-sm:mt-6 mt-[53px] underline underline-offset-2"
-          >
-            MÁS ACERCA DE MÍ
-          </Link>
+      <h3 className={clsx("text-2xl font-bold", "md:text-3xl")}>
+        Acerca de mí
+      </h3>
+      <p
+        className={clsx(
+          "text-lg font-semibold gradient-subtitle mb-6",
+          "md:text-xl",
         )}
-      </div>
-      <div
-        className={
-          isHome ? styles.isHome.containerImage : styles.noHome.containerImage
-        }
       >
-        <Image
-          src="/img-martin-2.png"
-          alt="Martin Nuñez Navarro"
-          width={300}
-          height={400}
-          className="w-full max-sm:h-[400px] h-[500px] object-contain"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+        Conóceme
+      </p>
+
+      <p className={clsx("text-xs leading-relaxed", "md:text-base")}>
+        <strong>
+          Como Software Frontend Engineer, Bachiller en Ingeniería de Sistemas,
+        </strong>{" "}
+        cuento con experiencia en el desarrollo de soluciones web modernas en
+        sectores como medios de comunicación y seguros. Mi trayectoria se ha
+        centrado en la construcción de interfaces escalables, optimizadas y
+        orientadas a la experiencia del usuario, participando activamente en
+        entornos ágiles y colaborativos.
+      </p>
+
+      <p className={clsx("text-xs leading-relaxed mt-4", "md:text-base")}>
+        Me apasiona crear soluciones digitales que comuniquen con claridad,
+        optimicen procesos y generen valor real. Siempre busco nuevas formas de
+        mejorar cada producto con tecnología moderna y un enfoque colaborativo.
+      </p>
+
+      <a
+        href="/martin.nuñez-cv.pdf"
+        download
+        className={clsx(
+          "mt-10 inline-flex items-center justify-center rounded-3xl border border-[#4FC3F7] bg-transparent px-8 py-3 text-base font-bold",
+        )}
+      >
+        DESCARGAR CV
+      </a>
     </section>
   );
 };
