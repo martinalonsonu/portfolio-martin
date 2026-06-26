@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
 
 :root {
   --color-background: #ffffff;
@@ -72,4 +74,12 @@ html[data-theme="light"] .bg-card {
 /* Gradient subtitle for dark mode */
 html[data-theme="dark"] .bg-card {
   background: #000;
+}
+
+.swiper-button-prev {
+  left: -30px !important;
+}
+
+.swiper-button-next {
+  right: -30px !important;
 }

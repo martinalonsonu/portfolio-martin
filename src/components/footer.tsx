@@ -54,7 +54,10 @@ const Footer = () => {
           "md:flex-row md:items-center md:justify-between",
         )}
       >
-        <p className="text-sm">© {year} @martinalonsonu. Hecho con ❤️.</p>
+        <p className="text-sm">
+          © (sin derechos reservados 😂) {year}. <br />
+          Hecho con ❤️ por @martinalonsonu.
+        </p>
         <Socials />
       </div>
     </footer>

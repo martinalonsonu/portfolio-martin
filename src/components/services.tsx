@@ -2,34 +2,19 @@ import clsx from "clsx";
 
 const services = [
   {
-    title: "Diseño web personalizado",
+    title: "Web a tu medida",
     description:
-      "Experiencias digitales únicas que reflejan tu marca y convierten visitantes en clientes.",
+      "Experiencias digitales únicas que reflejan tu marca y convierten visitantes en clientes. Optimizado para todo tipo de dispositivo.",
   },
   {
     title: "Estructura SEO friendly",
     description:
-      "Construcción de sitios optimizados para buscadores, con una arquitectura clara y rendimiento ágil.",
+      "Construcción de sitios optimizados para buscadores como Google, con una arquitectura clara y rendimiento.",
   },
   {
-    title: "Diseños responsivos",
+    title: "Proyectos",
     description:
-      "Interfaces que se adaptan de forma fluida a cualquier pantalla, desde móvil hasta desktop.",
-  },
-  {
-    title: "Soluciones ecommerce",
-    description:
-      "Tiendas online modernas y seguras con procesos de compra optimizados para vender más.",
-  },
-  {
-    title: "Mantenimiento continuo",
-    description:
-      "Soporte constante y actualizaciones para mantener tu sitio rápido, estable y actualizado.",
-  },
-  {
-    title: "Analítica y optimización",
-    description:
-      "Monitoreo de rendimiento y mejoras continuas para que tu sitio crezca con mejores resultados.",
+      "Trabajo colaborativo en equipos multidisciplinarios para entregar proyectos web reales, desde la planificación hasta el lanzamiento y mantenimiento.",
   },
 ];
 
